@@ -21,6 +21,7 @@ Xtrain, Xtest, Ytrain, Ytest = train_test_split(X, Y, test_size=0.2, random_stat
 Xtrain, Xval, Ytrain, Yval = train_test_split(Xtrain, Ytrain, test_size=0.2, random_state=0)
 
 # Create and fit the linear regression model
+LinearRegression.set_params({'copy_X': True, 'fit_intercept': True, 'n_jobs': -1, 'positive': False})
 regr = LinearRegression()
 regr.fit(Xtrain, Ytrain)
 
